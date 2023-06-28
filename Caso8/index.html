@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #e9e8e8;
+            background-image: url("beach.jpg");
             background-size: cover;
         }
 
@@ -26,29 +26,36 @@
 
 <body>
     <div class="container">
-        <h1>Resultado</h1>
-        <div id="resultado"></div>
+        <h1>Datos del JSON</h1>
+        <ul  id="datos-lista"></ul>
     </div>
 
 
     <script>
+        var lista = document.getElementById('datos-lista');
+
+        // Función para agregar un elemento de lista
+        function agregarElementoLista(texto) {
+            var li = document.createElement('li');
+            li.textContent = texto;
+            lista.appendChild(li);
+        }
+        const host = "http://127.0.0.1:5500/"
         // Cargar el archivo JSON desde una URL
-        const url = "http://127.0.0.1:5500/Caso8"
-        fetch(url+'/archivo.json')
+        fetch(host + 'Caso8/datos.json')
             .then(response => response.json())
             .then(datos => {
-                var resultadoDiv = document.getElementById('resultado');
-                resultadoDiv.innerHTML = '<h3>Nombre: ' + datos.nombre + '</h3>' +
-                    '<h3>Edad: ' + datos.edad + '</h3>' +
-                    '<h3>Teléfonos:</h3>' +
-                    '<ul class="list-group">';
+                // Mostrar los datos en la lista
+                agregarElementoLista('Nombre: ' + datos.nombre);
+                agregarElementoLista('Edad: ' + datos.edad);
 
+                agregarElementoLista('Teléfonos:');
                 datos.telefonos.forEach(function (telefono) {
-                    resultadoDiv.innerHTML += '<li class="list-group-item">Tipo: ' + telefono.tipo + ', Número: ' + telefono.numero + '</li>';
+                    agregarElementoLista('- Tipo: ' + telefono.tipo);
+                    agregarElementoLista('  Número: ' + telefono.numero);
                 });
 
-                resultadoDiv.innerHTML += '</ul>' +
-                    '<h3>Email: ' + datos.email + '</h3>';
+                agregarElementoLista('Email: ' + datos.email);
             })
             .catch(error => {
                 console.log('Error al cargar el archivo JSON:', error);
