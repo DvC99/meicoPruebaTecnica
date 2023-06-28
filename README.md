@@ -224,13 +224,58 @@ Cree un formulario que solicite la carga de dos valores enteros y muestre en otr
 
 Revise el código CSS proporcionado y determine el color de fondo del elemento con una clase de .box.
 
+```CSS
+    .box {
+    background-color: blue;
+    background: url(images/star.png?raw=png) no-repeat left top;
+    }
+```
+
+  1. black
+  2. ~~blue~~
+  3. transparent
+  4. white
+
 ## CASO 6: Re-escritura de función
 
-Reescriba la función proporcionada utilizando la sintaxis de la función de flecha.
+¿Cómo puedes reescribir esta función usando la sintaxis de la función de flecha?.
+
+  1. let product => (x,y) { <´br /> x * y; <´br />}
+
+  2. let product = (x,y) => x*y;
+  
+  3. let product => x*y;
+  
+  4. let product = (x,y) -> x*y;
 
 ## CASO 7: Creación de mensaje JSON
 
-Arme un mensaje JSON con los datos proporcionados: Nombre, Edad, Teléfonos (Tipo de teléfono y Número de teléfono) y Email.
+Arme un mensaje JSON con los datos proporcionados:
+  
+- Nombre
+- Edad
+- Telefonos
+  - Tipo de teléfono
+  - Número de teléfono
+- Email.
+
+```JSON
+    {
+        "Nombre": "Juan",
+        "Edad": 12,
+        "Telefonos": [
+            {
+                "Tipo": "Celular",
+                "Numero": "3020010210"
+            },
+            {
+                "Tipo": "Celular",
+                "Numero": "3020010210"
+            }
+        ],
+        "Email": "dadad@hooms.com"
+    }
+```
 
 ## CASO 8: Extracción de datos de un archivo JSON
 

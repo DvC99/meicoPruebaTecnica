@@ -1,0 +1,15 @@
+{
+    "nombre": "John Doe",
+    "edad": 30,
+    "telefonos": [
+        {
+            "tipo": "celular",
+            "numero": "1234567890"
+        },
+        {
+            "tipo": "casa",
+            "numero": "9876543210"
+        }
+    ],
+    "email": "johndoe@example.com"
+}

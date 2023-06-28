@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Página 2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #e9e8e8;
+            background-size: cover;
+        }
+
+        .container {
+            margin-top: 200px;
+            text-align: center;
+        }
+
+        .btn-back {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Resultado</h1>
+        <div id="resultado"></div>
+    </div>
+
+
+    <script>
+        // Cargar el archivo JSON desde una URL
+        const url = "http://127.0.0.1:5500/Caso8"
+        fetch(url+'/archivo.json')
+            .then(response => response.json())
+            .then(datos => {
+                var resultadoDiv = document.getElementById('resultado');
+                resultadoDiv.innerHTML = '<h3>Nombre: ' + datos.nombre + '</h3>' +
+                    '<h3>Edad: ' + datos.edad + '</h3>' +
+                    '<h3>Teléfonos:</h3>' +
+                    '<ul class="list-group">';
+
+                datos.telefonos.forEach(function (telefono) {
+                    resultadoDiv.innerHTML += '<li class="list-group-item">Tipo: ' + telefono.tipo + ', Número: ' + telefono.numero + '</li>';
+                });
+
+                resultadoDiv.innerHTML += '</ul>' +
+                    '<h3>Email: ' + datos.email + '</h3>';
+            })
+            .catch(error => {
+                console.log('Error al cargar el archivo JSON:', error);
+            });
+    </script>
+</body>
+
+</html>
