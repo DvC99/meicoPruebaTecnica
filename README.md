@@ -282,6 +282,6 @@ Arme un mensaje JSON con los datos proporcionados:
 Genere un programa para extraer los datos del archivo JSON generado en el caso anterior y mostrarlos en formato de lista en una página web.
 
 - **Formulario de entrada:**
-    ![Formulario en primera pagina](https://github.com/DvC99/meicoPruebaTecnica/blob/6ea4f9218e321a6a33e3e9e4fc37d7768b835288/Caso4/pagina1.png)
+    ![Formulario en primera pagina](https://github.com/DvC99/meicoPruebaTecnica/blob/e9bf4d9d3d32f7786c52f5c8335d7f3fafacbae3/Caso8/mostrarJSON.png)
 
 ¡Mucho éxito en la resolución de los casos!
