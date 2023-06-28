@@ -242,7 +242,7 @@ Revise el código CSS proporcionado y determine el color de fondo del elemento c
 
   1. let product => (x,y) { <´br /> x * y; <´br />}
 
-  2. let product = (x,y) => x*y;
+  2. ~~let product = (x,y) => x*y;~~
   
   3. let product => x*y;
   
