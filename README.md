@@ -210,11 +210,15 @@ Cree un formulario que solicite la carga de dos valores enteros y muestre en otr
 
 - **Formulario de entrada:**
 
-    ![Formulario en primera pagina](https://github.com/tu-usuario/tu-repo/raw/rama/ruta/a/la/imagen.png)
+    ![Formulario en primera pagina](https://github.com/DvC99/meicoPruebaTecnica/blob/6ea4f9218e321a6a33e3e9e4fc37d7768b835288/Caso4/pagina1.png)
 
 - **Resultado de la suma:**
 
-    ![Resultado en segunda pagina](https://github.com/tu-usuario/tu-repo/raw/rama/ruta/a/la/imagen.png)
+    ![Resultado en segunda pagina](https://github.com/DvC99/meicoPruebaTecnica/blob/6ea4f9218e321a6a33e3e9e4fc37d7768b835288/Caso4/pagina2.png)
+
+- **Muestra error número negativo:**
+
+    ![Formulario error negativos](https://github.com/DvC99/meicoPruebaTecnica/blob/6ea4f9218e321a6a33e3e9e4fc37d7768b835288/Caso4/muestraErrorPagina1.png)
 
 ## CASO 5: Revisión de CSS
 
