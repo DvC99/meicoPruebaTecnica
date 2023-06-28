@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <!-- Agrega los enlaces a los archivos CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body style="background-color: #f0eded; background-size: cover;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1 class="text-center mt-5">Formulario</h1>
+                <form onsubmit="guardarNumeros(event)" class="mt-5">
+                    <div class="form-group">
+                        <label for="numero1">Ingrese el primer número positivo:</label>
+                        <input type="number" class="form-control" id="numero1" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="numero2">Ingrese el segundo número positivo:</label>
+                        <input type="number" class="form-control" id="numero2" min="1" required>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function guardarNumeros(event) {
+            event.preventDefault();
+            var numero1 = document.getElementById('numero1').value;
+            var numero2 = document.getElementById('numero2').value;
+            localStorage.setItem('numero1', numero1);
+            localStorage.setItem('numero2', numero2);
+            window.location.href = 'pagina2.html';
+        }
+    </script>
+</body>
+
+</html>

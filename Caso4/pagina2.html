@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+    <!-- Agrega los enlaces a los archivos CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body style="background-color: #f0eded; background-size: cover;">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <a href="index.html" class="btn btn-primary">Regresar</a>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <h1 class="text-center">Resultado</h1>
+                <p class="text-center" id="resultado"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var numero1 = localStorage.getItem('numero1');
+        var numero2 = localStorage.getItem('numero2');
+        if (numero1 && numero2) {
+            var suma = parseInt(numero1) + parseInt(numero2);
+            document.getElementById('resultado').textContent = 'El resultado de la suma es: ' + suma;
+        } else {
+            document.getElementById('resultado').textContent = 'No se recibieron los números para sumar.';
+        }
+    </script>
+</body>
+
+</html>
